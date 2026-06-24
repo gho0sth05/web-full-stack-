@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonStore - Alta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+        .auth-container { width: 100%; max-width: 400px; padding: 20px; }
+        h1 { text-align: center; font-size: 26px; letter-spacing: 2px; text-shadow: 0 0 10px var(--purple-neon); margin-bottom: 30px; }
+        .auth-footer { margin-top: 25px; text-align: center; font-size: 13px; color: var(--text-muted); }
+        .alert-box { display: none; margin-bottom: 20px; }
+        select { padding-left: 42px; }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="cyber-card">
+            <h1>Registrar Sistema</h1>
+            <div id="alert-msg" class="alert-box"></div>
+            <form id="registro-form">
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <div class="input-wrapper"><i class="fa-solid fa-id-card"></i><input type="text" id="reg-nombre" required></div>
+                </div>
+                <div class="form-group">
+                    <label>Correo Electrónico</label>
+                    <div class="input-wrapper"><i class="fa-solid fa-envelope"></i><input type="email" id="reg-email" required></div>
+                </div>
+                <div class="form-group">
+                    <label>Rol Interno</label>
+                    <div class="input-wrapper"><i class="fa-solid fa-user-shield"></i>
+                        <select id="reg-rol">
+                            <option value="usuario">Operario (Lectura/Filtros)</option>
+                            <option value="admin">Administrador (CRUD Total)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <div class="input-wrapper"><i class="fa-solid fa-lock"></i><input type="password" id="reg-password" placeholder="Mínimo 6 caracteres" required></div>
+                </div>
+                <button type="submit" class="btn-submit">Inyectar Alta</button>
+            </form>
+            <div class="auth-footer">¿Ya tienes cuenta? <a href="index.html">Inicia Sesión</a></div>
+        </div>
+    </div>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>
